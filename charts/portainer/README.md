@@ -62,8 +62,6 @@ The following table lists the configurable parameters of the Portainer chart and
 | `image.pullPolicy` | Portainer image pulling policy | `IfNotPresent` |
 | `imagePullSecrets` | If Portainer image requires to be in a private repository | `nil` |
 | `nodeSelector` | Used to apply a nodeSelector to the deployment | `{}` |
-| `serviceAccount.annotations` | Annotations to add to the service account | `null` |
-| `serviceAccount.name` | The name of the service account to use | `portainer-sa-clusteradmin` |
 | `service.type` | Service Type for the main Portainer Service; ClusterIP, NodePort and LoadBalancer | `LoadBalancer` |
 | `service.httpPort` | HTTP port for accessing Portainer Web | `9000` |
 | `service.httpNodePort` | Static NodePort for accessing Portainer Web. Specify only if the type is NodePort | `30777` |

@@ -52,17 +52,6 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end -}}
 
 {{/*
-Create the name of the service account to use
-*/}}
-{{- define "portainer.serviceAccountName" -}}
-{{- if .Values.serviceAccount.create -}}
-    {{ default (include "portainer.fullname" .) .Values.serviceAccount.name }}
-{{- else -}}
-    {{ default "default" .Values.serviceAccount.name }}
-{{- end -}}
-{{- end -}}
-
-{{/*
 Provide a pre-defined claim or a claim based on the Release
 */}}
 {{- define "portainer.pvcName" -}}

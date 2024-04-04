@@ -21,10 +21,6 @@ imagePullSecrets: []
 
 nodeSelector: {}
 
-serviceAccount:
-  annotations: {}
-  name: portainer-sa-clusteradmin
-
 service:
   # Set the httpNodePort and edgeNodePort only if the type is NodePort
   # For Ingress, set the type to be ClusterIP and set ingress.enabled to true

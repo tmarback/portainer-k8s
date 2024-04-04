@@ -23,7 +23,6 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "portainer.serviceAccountName" . }}
       volumes:
         {{- if .Values.persistence.enabled }}
         - name: "data"
